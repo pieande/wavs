@@ -1,0 +1,15 @@
+# This is a Python requirements file
+# Use pip to install these dependencies
+
+
+Flask==1.1.2
+
+# System tools (install separately)
+# nmap
+# wapiti
+# gobuster
+# nuclei
+
+
+
+

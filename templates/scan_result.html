@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scan Results</title>
+        <style>
+            @font-face {
+                font-family: type-writer;
+                src: url('/static/font.otf');
+            }
+            body {
+                background-image: url('/static/bg-pic.jpg');
+                background-color: #000000;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+                color: #fff;
+                font-family: type-writer;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .scan-buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 100px;
+            }
+            .scan-button {
+                padding: 11px 44px;
+                font-size: 1.4rem;
+                border: none;
+                border-radius: 50px;
+                background-color: #f76b00;
+                color: #ffffff;
+                cursor: pointer;
+                margin: 100px 10px;
+                transition: background-color 0.2s;
+            }
+            .scan-button:hover {
+                background-color: #00fc229d;
+            }
+            .message-container {
+                padding: 10px 50px;
+                background-color: #00fc229d; 
+                border-radius: 100px;
+                margin-bottom: -100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="message-container">
+            <h1>Scan Completed</h1>
+        </div>
+        <div class="scan-buttons">
+            <button class="scan-button" onclick="window.location.href='{{ url_for('static', filename=nmap_filename) }}'">Nmap scan</button>
+            <button class="scan-button" onclick="window.location.href='{{ url_for('static', filename=wapiti_filename) }}'">Wapiti scan</button>
+        </div>
+    </body>
+</html>
